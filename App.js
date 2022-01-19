@@ -22,7 +22,7 @@ export default function App() {
           fontFamily: "Sydney", // test to see if the font is loaded, feel free to remove this
         }}
       >
-        Open up App.js to stariuegrhgieruking on your app!
+        Open up App.js to stariuegrgregerhgieruking on your app!
       </Text>
       <Text
         style={{
