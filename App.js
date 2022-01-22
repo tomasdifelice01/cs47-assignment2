@@ -31,10 +31,12 @@ export default function App() {
       </View>
       <View style={styles.profile}>
         <View style={styles.card}>
-          <Text style={styles.name}>MTL</Text>
+          <Text style={styles.name}>{Profiles.mtl.name}</Text>
+          <Text style={styles.caption}>{Profiles.mtl.caption}</Text>
           <Image style={styles.profileImage} source={Profiles.mtl.image} />
         </View>
         <View style={styles.audio}>
+          <Text style={styles.take}>My hottest take</Text>
           <Image style={styles.audioImage} source={Icons.audioWave.light} />
         </View>
       </View>
@@ -54,24 +56,43 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     height: Platform.OS === "ios" ? 41 : 54,
-    width: "100%",
+    width: "95%",
     marginTop: 60,
-    paddingHorizontal: 40,
+    marginBottom: 10,
+    paddingHorizontal: 10,
     justifyContent: "space-between",
     alignItems: "center",
   },
   profile: {
-    height: "40%",
-    width: "90%",
+    position: "relative",
+    height: "50%",
+    width: "95%",
     display: "flex",
     flexDirection: "column",
     alignContent: "center",
+    //padding: 10,
   },
   card: {
-    width: "100%",
+    width: "95%",
+    height: "90%",
+    margin: 10,
   },
   name: {
-    position: "relative",
+    position: "absolute",
+    fontFamily: "Sydney",
+    fontSize: 32,
+    color: Themes.light.textSecondary,
+    margin: 10,
+    zIndex: 1,
+  },
+  caption: {
+    position: "absolute",
+    fontFamily: "Sydney",
+    fontSize: 18,
+    color: Themes.light.textSecondary,
+    margin: 10,
+    zIndex: 1,
+    bottom: 0,
   },
   logoImage: {
     height: "90%",
@@ -83,13 +104,27 @@ const styles = StyleSheet.create({
     fontFamily: "Sydney-Bold",
   },
   profileImage: {
-    position: "relative",
+    position: "absolute",
     top: 0,
-    resizeMode: "contain",
-    width: "90%",
+    //resizeMode: "center",
+    width: "100%",
+    height: "100%",
+    borderRadius: 10,
+    aspectRatio: 1 / 1.1,
+  },
+  audio: {
+    backgroundColor: Themes.light.bgSecondary,
+    borderRadius: 30,
+    margin: 10,
   },
   audioImage: {
-    resizeMode: "contain",
+    resizeMode: "center",
     width: "90%",
+  },
+  take: {
+    fontSize: 32,
+    marginTop: 25,
+    marginLeft: 20,
+    fontFamily: "Sydney",
   },
 });
