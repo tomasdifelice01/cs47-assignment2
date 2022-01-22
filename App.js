@@ -1,7 +1,14 @@
 import AppLoading from "expo-app-loading";
-import { StyleSheet, Text, View, StatusBar } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  StatusBar,
+  Image,
+  Platform,
+} from "react-native";
 import { useFonts } from "expo-font";
-import { Themes } from "./assets/Themes";
+import { Themes, Icons, Profiles } from "./assets/Themes";
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -17,20 +24,21 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Text
-        style={{
-          fontFamily: "Sydney", // test to see if the font is loaded, feel free to remove this
-        }}
-      >
-        Open up App.js to stariuegrgregerhgieruking on your app!
-      </Text>
-      <Text
-        style={{
-          fontFamily: "Sydney-Bold", // test to see if the font is loaded, feel free to remove this
-        }}
-      >
-        ~Good luck~
-      </Text>
+      <View style={styles.navBar}>
+        <Image style={styles.logoImage} source={Icons.menu.light} />
+        <Text style={styles.appName}> ensom</Text>
+        <Image style={styles.logoImage} source={Icons.sun} />
+      </View>
+      <View style={styles.profile}>
+        <View style={styles.card}>
+          <Text style={styles.name}>MTL</Text>
+          <Image style={styles.profileImage} source={Profiles.mtl.image} />
+        </View>
+        <View style={styles.audio}>
+          <Image style={styles.audioImage} source={Icons.audioWave.light} />
+        </View>
+      </View>
+      <View style={styles.bottomBar}></View>
     </View>
   );
 }
@@ -38,8 +46,50 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
+    backgroundColor: Themes.light.bg,
+    flexDirection: "column",
     alignItems: "center",
-    justifyContent: "center",
+  },
+  navBar: {
+    display: "flex",
+    flexDirection: "row",
+    height: Platform.OS === "ios" ? 41 : 54,
+    width: "100%",
+    marginTop: 60,
+    paddingHorizontal: 40,
+    justifyContent: "space-between",
+    alignItems: "center",
+  },
+  profile: {
+    height: "40%",
+    width: "90%",
+    display: "flex",
+    flexDirection: "column",
+    alignContent: "center",
+  },
+  card: {
+    width: "100%",
+  },
+  name: {
+    position: "relative",
+  },
+  logoImage: {
+    height: "90%",
+    width: 40,
+    resizeMode: "contain",
+  },
+  appName: {
+    fontSize: 32,
+    fontFamily: "Sydney-Bold",
+  },
+  profileImage: {
+    position: "relative",
+    top: 0,
+    resizeMode: "contain",
+    width: "90%",
+  },
+  audioImage: {
+    resizeMode: "contain",
+    width: "90%",
   },
 });
