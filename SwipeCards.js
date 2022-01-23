@@ -234,7 +234,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   noMoreCards: {
-    width: "90%",
+    width: width * 0.95 > maxWidth ? maxWidth : width * 0.95,
     alignSelf: "center",
     backgroundColor: Themes.light.bgSecondary,
     borderRadius: 20,
