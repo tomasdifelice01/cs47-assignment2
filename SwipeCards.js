@@ -140,7 +140,7 @@ const styles = StyleSheet.create({
   },
   card: {
     width: "90%",
-    height: Platform.isPad ? "97%" : "100%",
+    height: "100%",
     margin: 10,
     marginBottom: "3%",
     display: "flex",
@@ -188,12 +188,15 @@ const styles = StyleSheet.create({
     aspectRatio: 1 / 1.1,
   },
   audio: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
     width: "90%",
     alignSelf: "center",
     backgroundColor: Themes.light.bgSecondary,
     borderRadius: 30,
     margin: 10,
-    height: "42%",
+    height: Platform.isPad ? "40%" : "42%",
     shadowColor: Themes.light.shadows.shadowColor,
     shadowOffset: Themes.light.shadows.shadowOffset,
     shadowRadius: Themes.light.shadows.shadowRadius,
@@ -219,8 +222,7 @@ const styles = StyleSheet.create({
   },
   take: {
     fontSize: Platform.isPad ? 40 : 24,
-    marginTop: 25,
-    marginLeft: 25,
+    marginLeft: "7%",
     fontFamily: "Sydney",
   },
   noMoreCardsText: {
@@ -247,9 +249,10 @@ const styles = StyleSheet.create({
   },
   audioImages: {
     display: "flex",
-    width: "100%",
+    width: "95%",
+    alignSelf: "center",
     flexDirection: "row",
-    height: "40%",
+    height: "38%",
     alignItems: "center",
     marginTop: 15,
     //justifyContent: "space-between",
