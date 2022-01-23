@@ -35,7 +35,6 @@ export default function App() {
         <Image style={styles.logoImage} source={Icons.sun} />
       </View>
       <SwipeCards />
-
       <View style={styles.bottomBar}>
         <View style={styles.bottomIcons}>
           <Image style={styles.bottomImage} source={Icons.discover.light} />
@@ -73,7 +72,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   swipeCards: {
-    //flex: 1,
+    display: "flex",
     //position: "relative",
     height: "50%",
     width: "95%",

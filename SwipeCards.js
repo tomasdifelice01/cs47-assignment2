@@ -53,7 +53,7 @@ class NoMoreCards extends Component {
       <View style={styles.noMoreCards}>
         <Text style={styles.noMoreCardsText}>
           Looks like you ran out of swipes! Come back in 24 hours or venmo
-          @tomydifelice to upgrade your account and get more swipes
+          @tomasdifelice to upgrade your account and get more swipes :)
         </Text>
       </View>
     );
@@ -125,11 +125,13 @@ export default class extends React.Component {
   }
 }
 
+const maxWidth = 600;
+
 const styles = StyleSheet.create({
   profile: {
     //position: "relative",
-    height: "100%",
-    width: width * 0.95,
+    height: Platform.isPad ? "76%" : "73%",
+    width: width * 0.95 > maxWidth ? maxWidth : width * 0.95,
     display: "flex",
     //flexDirection: "column",
     //alignContent: "center",
@@ -138,8 +140,9 @@ const styles = StyleSheet.create({
   },
   card: {
     width: "90%",
-    height: "100%",
+    height: Platform.isPad ? "97%" : "100%",
     margin: 10,
+    marginBottom: "3%",
     display: "flex",
     alignSelf: "center",
     shadowColor: Themes.light.shadows.shadowColor,
@@ -152,7 +155,8 @@ const styles = StyleSheet.create({
     fontFamily: "Sydney",
     fontSize: Platform.isPad ? 45 : 32,
     color: Themes.light.textSecondary,
-    margin: 10,
+    marginLeft: 12,
+    marginTop: 5,
     zIndex: 1,
   },
   caption: {
@@ -187,9 +191,9 @@ const styles = StyleSheet.create({
     width: "90%",
     alignSelf: "center",
     backgroundColor: Themes.light.bgSecondary,
-    borderRadius: 20,
+    borderRadius: 30,
     margin: 10,
-    height: "40%",
+    height: "42%",
     shadowColor: Themes.light.shadows.shadowColor,
     shadowOffset: Themes.light.shadows.shadowOffset,
     shadowRadius: Themes.light.shadows.shadowRadius,
@@ -214,9 +218,9 @@ const styles = StyleSheet.create({
     //width: "90%",
   },
   take: {
-    fontSize: Platform.isPad ? 45 : 32,
-    marginTop: 15,
-    marginLeft: 15,
+    fontSize: Platform.isPad ? 40 : 24,
+    marginTop: 25,
+    marginLeft: 25,
     fontFamily: "Sydney",
   },
   noMoreCardsText: {
@@ -233,6 +237,7 @@ const styles = StyleSheet.create({
     backgroundColor: Themes.light.bgSecondary,
     borderRadius: 20,
     margin: 10,
+    paddingHorizontal: 30,
     height: "80%",
     justifyContent: "center",
     shadowColor: Themes.light.shadows.shadowColor,
