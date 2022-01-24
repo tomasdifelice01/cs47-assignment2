@@ -129,8 +129,8 @@ const maxWidth = 600;
 
 const styles = StyleSheet.create({
   profile: {
-    //position: "relative",
-    height: Platform.isPad ? "76%" : "73%",
+    position: "relative",
+    height: Platform.isPad ? "100%" : "100%",
     width: width * 0.95 > maxWidth ? maxWidth : width * 0.95,
     display: "flex",
     //flexDirection: "column",
@@ -140,9 +140,10 @@ const styles = StyleSheet.create({
   },
   card: {
     width: "90%",
-    height: "100%",
+    height: "97%",
     margin: 10,
     marginBottom: "3%",
+    //paddingTop: 15,
     display: "flex",
     alignSelf: "center",
     shadowColor: Themes.light.shadows.shadowColor,
@@ -155,8 +156,8 @@ const styles = StyleSheet.create({
     fontFamily: "Sydney",
     fontSize: Platform.isPad ? 45 : 32,
     color: Themes.light.textSecondary,
-    marginLeft: 12,
-    marginTop: 5,
+    marginLeft: "4%",
+    marginTop: "2%",
     zIndex: 1,
   },
   caption: {
@@ -164,7 +165,8 @@ const styles = StyleSheet.create({
     fontFamily: "Sydney",
     fontSize: Platform.isPad ? 24 : 18,
     color: Themes.light.textSecondary,
-    margin: 10,
+    marginLeft: "4%",
+    marginBottom: "2%",
     zIndex: 1,
     bottom: 0,
   },
@@ -234,7 +236,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   noMoreCards: {
-    width: width * 0.95 > maxWidth ? maxWidth : width * 0.95,
+    width: width * 0.85 > maxWidth ? maxWidth : width * 0.85,
     alignSelf: "center",
     backgroundColor: Themes.light.bgSecondary,
     borderRadius: 20,

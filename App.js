@@ -34,7 +34,10 @@ export default function App() {
         <Text style={styles.appName}> ensom</Text>
         <Image style={styles.logoImage} source={Icons.sun} />
       </View>
-      <SwipeCards />
+      <View style={styles.swipeCards}>
+        <SwipeCards />
+      </View>
+
       <View style={styles.bottomBar}>
         <View style={styles.bottomIcons}>
           <Image style={styles.bottomImage} source={Icons.discover.light} />
@@ -66,15 +69,16 @@ const styles = StyleSheet.create({
     height: Platform.OS === "ios" ? 41 : 54,
     width: "90%",
     marginTop: 5,
-    marginBottom: 10,
+    marginBottom: 22,
     paddingHorizontal: 10,
     justifyContent: "space-between",
     alignItems: "center",
   },
   swipeCards: {
     display: "flex",
+    //flex: 1,
     //position: "relative",
-    height: "50%",
+    height: Platform.isPad ? "55%" : "48%",
     width: "95%",
     //display: "flex",
     //flexDirection: "column",
