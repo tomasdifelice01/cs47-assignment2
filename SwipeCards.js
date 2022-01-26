@@ -1,17 +1,9 @@
 // SwipeCards.js
 "use strict";
 
-import {
-  StyleSheet,
-  Text,
-  View,
-  SafeAreaView,
-  StatusBar,
-  Image,
-  Platform,
-} from "react-native";
+import { StyleSheet, Text, View, Image, Platform } from "react-native";
 import { Dimensions } from "react-native";
-const { width, height } = Dimensions.get("window");
+const { width } = Dimensions.get("window");
 
 import React, { Component } from "react";
 import { Themes, Icons, Profiles } from "./assets/Themes";
@@ -165,15 +157,6 @@ const styles = StyleSheet.create({
     marginBottom: "2%",
     zIndex: 1,
     bottom: 0,
-  },
-  logoImage: {
-    height: "100%",
-    width: 40,
-    resizeMode: "contain",
-  },
-  appName: {
-    fontSize: 32,
-    fontFamily: "Sydney-Bold",
   },
   profileImage: {
     position: "absolute",
