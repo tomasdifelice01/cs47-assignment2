@@ -44,8 +44,8 @@ class NoMoreCards extends Component {
     return (
       <View style={styles.noMoreCards}>
         <Text style={styles.noMoreCardsText}>
-          Looks like you ran out of swipes! Come back in 24 hours or venmo
-          @tomasdifelice to upgrade your account and get more swipes :)
+          Looks like you ran out of swipes! Come back in 24 hours or venmo @tdf
+          to upgrade your account and get more swipes :) (jk don't)
         </Text>
       </View>
     );
