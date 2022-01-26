@@ -133,9 +133,6 @@ const styles = StyleSheet.create({
     height: Platform.isPad ? "100%" : "100%",
     width: width * 0.95 > maxWidth ? maxWidth : width * 0.95,
     display: "flex",
-    //flexDirection: "column",
-    //alignContent: "center",
-    //padding: 10,
     alignSelf: "center",
   },
   card: {
@@ -143,7 +140,6 @@ const styles = StyleSheet.create({
     height: "97%",
     margin: 10,
     marginBottom: "3%",
-    //paddingTop: 15,
     display: "flex",
     alignSelf: "center",
     shadowColor: Themes.light.shadows.shadowColor,
@@ -182,8 +178,6 @@ const styles = StyleSheet.create({
   profileImage: {
     position: "absolute",
     top: 0,
-    //flex: 1,
-    //resizeMode: "contain",
     width: "100%",
     height: "100%",
     borderRadius: 10,
@@ -205,22 +199,14 @@ const styles = StyleSheet.create({
     shadowOpacity: Themes.light.shadows.shadowOpacity,
   },
   wave: {
-    //position: "absolute",
-
     resizeMode: "contain",
     height: "100%",
     width: "70%",
-
-    //position: "absolute",
-    //width: "90%",
   },
   play: {
-    //position: "absolute",
     resizeMode: "contain",
     height: "100%",
     width: "25%",
-    //position: "absolute",
-    //width: "90%",
   },
   take: {
     fontSize: Platform.isPad ? 40 : 24,
@@ -257,6 +243,5 @@ const styles = StyleSheet.create({
     height: "38%",
     alignItems: "center",
     marginTop: 15,
-    //justifyContent: "space-between",
   },
 });

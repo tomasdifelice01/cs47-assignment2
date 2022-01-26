@@ -21,11 +21,7 @@ export default function App() {
     "Sydney-Bold": require("./assets/Fonts/Sydney-Serial-Bold.ttf"),
   });
   if (!fontsLoaded) return <AppLoading />;
-  /* ^Don't mind/edit the code above, it's there to load the font for you! */
   StatusBar.setBarStyle(Themes.light.statusBar);
-  /* ^Don't mind/edit this one either unless you decide to do the dark theme one, in that case, you will have to change it accordingly*/
-
-  /* insert your code here */
 
   return (
     <SafeAreaView style={styles.container}>
@@ -76,14 +72,8 @@ const styles = StyleSheet.create({
   },
   swipeCards: {
     display: "flex",
-    //flex: 1,
-    //position: "relative",
     height: Platform.isPad ? "55%" : "48%",
     width: "95%",
-    //display: "flex",
-    //flexDirection: "column",
-    //alignContent: "center",
-    //padding: 10,
   },
   card: {
     width: "90%",
@@ -125,8 +115,6 @@ const styles = StyleSheet.create({
   profileImage: {
     position: "absolute",
     top: 0,
-    //flex: 1,
-    //resizeMode: "contain",
     width: "100%",
     height: "100%",
     borderRadius: 10,
@@ -145,22 +133,14 @@ const styles = StyleSheet.create({
     shadowOpacity: Themes.light.shadows.shadowOpacity,
   },
   wave: {
-    //position: "absolute",
-
     resizeMode: "contain",
     height: "100%",
     width: "70%",
-
-    //position: "absolute",
-    //width: "90%",
   },
   play: {
-    //position: "absolute",
     resizeMode: "contain",
     height: "100%",
     width: "25%",
-    //position: "absolute",
-    //width: "90%",
   },
   take: {
     fontSize: Platform.isPad ? 45 : 32,
@@ -173,7 +153,6 @@ const styles = StyleSheet.create({
     bottom: 0,
     backgroundColor: Themes.light.navigation,
     height: "10%",
-    //height: 80,
     width: "100%",
     display: "flex",
     flexDirection: "row",
@@ -208,6 +187,5 @@ const styles = StyleSheet.create({
     height: "40%",
     alignItems: "center",
     marginTop: 15,
-    //justifyContent: "space-between",
   },
 });
